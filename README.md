@@ -22,7 +22,7 @@
 | License | ![](https://badgen.net/github/license/contributte/anabelle) |
 
 <p align=center>
-	<img src="https://github.com/contributte/anabelle/blob/master/.docs/assets/anabelle.png">
+	<img src="https://github.com/contributte/anabelle/blob/master/assets/anabelle.png">
 </p>
 
 ## About
