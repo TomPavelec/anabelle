@@ -9,6 +9,7 @@ use Contributte\Anabelle\Generator\DocuGenerator;
 use Contributte\Anabelle\Generator\Exception\DocuFileGeneratorException;
 use Contributte\Anabelle\Generator\Exception\DocuGeneratorException;
 use Contributte\Anabelle\Http\AuthCredentials;
+use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Helper\FormatterHelper;
 use Symfony\Component\Console\Input\InputArgument;
@@ -16,6 +17,7 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
+#[AsCommand(name: 'anabelle', description: 'Generates a documentation from target directory')]
 final class GenerateDocuCommand extends Command
 {
 
@@ -107,10 +109,6 @@ final class GenerateDocuCommand extends Command
 
 	protected function configure(): void
 	{
-		$this->setName('anabelle')
-			->setDescription('Generates a documentation from target directory')
-			->setHelp($this->getDescription());
-
 		$this->addArgument(
 			'inputDirectory',
 			InputArgument::REQUIRED,

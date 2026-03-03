@@ -16,9 +16,9 @@ use Contributte\Anabelle\Console\GenerateDocuCommand;
 
 $application = new Application('anabelle');
 
-$application->add($command = new GenerateDocuCommand(__DIR__));
+$application->addCommand($command = new GenerateDocuCommand(__DIR__));
 
-$application->setDefaultCommand($command->getName(), true);
+$application->setDefaultCommand('anabelle', true);
 $application->run();
 
 exit(0);
